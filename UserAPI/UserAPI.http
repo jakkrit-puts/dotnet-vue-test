@@ -1,0 +1,24 @@
+@UserAPI_HostAddress = http://localhost:5076/api
+
+### Register
+POST {{UserAPI_HostAddress}}/User/register
+Content-Type: application/json
+
+{
+    "username": "test1",
+    "password": "Aa112233"
+}
+
+### Login
+POST {{UserAPI_HostAddress}}/User/login
+Content-Type: application/json
+
+{
+    "username": "test3",
+    "password": "Aa112233"
+}
+
+### Get Profile
+GET {{UserAPI_HostAddress}}/User/profile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJleHAiOjE3NjE3NDI0NzksImlzcyI6Ikp3dElzc3VlciIsImF1ZCI6Ikp3dEF1ZGllbmNlIn0.xF_qV2h94hC-oDkLoc-Qfd1R25SU3eWy24-wQJCO01c
