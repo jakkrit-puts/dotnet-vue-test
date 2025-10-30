@@ -9,3 +9,8 @@ http://localhost:5076/openapi/v1.json
 ```
 
 ### how to run UserInterface
+```
+pnpm install
+
+pnpm dev
+```
