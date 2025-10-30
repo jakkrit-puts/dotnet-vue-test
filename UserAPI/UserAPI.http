@@ -5,7 +5,7 @@ POST {{UserAPI_HostAddress}}/User/register
 Content-Type: application/json
 
 {
-    "username": "test1",
+    "username": "u001",
     "password": "Aa112233"
 }
 

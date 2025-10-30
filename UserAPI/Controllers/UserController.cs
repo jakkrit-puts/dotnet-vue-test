@@ -41,7 +41,13 @@ public class UserController : ControllerBase
         _context.Users.Add(user);
         await _context.SaveChangesAsync();
 
-        return CreatedAtAction(nameof(Register), new { id = user.Id }, user);
+        var responseUser = new
+        {
+            user.Id,
+            user.Username,
+        };
+
+        return CreatedAtAction(nameof(Register), new { id = user.Id }, responseUser);
     }
 
     [HttpPost("login")]
@@ -65,11 +71,6 @@ public class UserController : ControllerBase
         return Ok(new
         {
             token = token,
-            user = new
-            {
-                id = existingUser.Id,
-                username = existingUser.Username,
-            }
         });
     }
 
@@ -102,6 +103,4 @@ public class UserController : ControllerBase
             }
         });
     }
-
-
 }
